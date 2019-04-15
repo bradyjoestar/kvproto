@@ -176,33 +176,6 @@ impl ::protobuf::Message for NotLeader {
         NotLeader::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &NotLeader| { &m.region_id },
-                    |m: &mut NotLeader| { &mut m.region_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::metapb::Peer>>(
-                    "leader",
-                    |m: &NotLeader| { &m.leader },
-                    |m: &mut NotLeader| { &mut m.leader },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<NotLeader>(
-                    "NotLeader",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static NotLeader {
         static mut instance: ::protobuf::lazy::Lazy<NotLeader> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -367,33 +340,6 @@ impl ::protobuf::Message for StoreNotMatch {
         StoreNotMatch::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "request_store_id",
-                    |m: &StoreNotMatch| { &m.request_store_id },
-                    |m: &mut StoreNotMatch| { &mut m.request_store_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "actual_store_id",
-                    |m: &StoreNotMatch| { &m.actual_store_id },
-                    |m: &mut StoreNotMatch| { &mut m.actual_store_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<StoreNotMatch>(
-                    "StoreNotMatch",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static StoreNotMatch {
         static mut instance: ::protobuf::lazy::Lazy<StoreNotMatch> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -527,28 +473,6 @@ impl ::protobuf::Message for RegionNotFound {
 
     fn new() -> RegionNotFound {
         RegionNotFound::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RegionNotFound| { &m.region_id },
-                    |m: &mut RegionNotFound| { &mut m.region_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionNotFound>(
-                    "RegionNotFound",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RegionNotFound {
@@ -793,43 +717,6 @@ impl ::protobuf::Message for KeyNotInRegion {
         KeyNotInRegion::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "key",
-                    |m: &KeyNotInRegion| { &m.key },
-                    |m: &mut KeyNotInRegion| { &mut m.key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &KeyNotInRegion| { &m.region_id },
-                    |m: &mut KeyNotInRegion| { &mut m.region_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "start_key",
-                    |m: &KeyNotInRegion| { &m.start_key },
-                    |m: &mut KeyNotInRegion| { &mut m.start_key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "end_key",
-                    |m: &KeyNotInRegion| { &m.end_key },
-                    |m: &mut KeyNotInRegion| { &mut m.end_key },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<KeyNotInRegion>(
-                    "KeyNotInRegion",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static KeyNotInRegion {
         static mut instance: ::protobuf::lazy::Lazy<KeyNotInRegion> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -979,28 +866,6 @@ impl ::protobuf::Message for EpochNotMatch {
 
     fn new() -> EpochNotMatch {
         EpochNotMatch::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::metapb::Region>>(
-                    "current_regions",
-                    |m: &EpochNotMatch| { &m.current_regions },
-                    |m: &mut EpochNotMatch| { &mut m.current_regions },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<EpochNotMatch>(
-                    "EpochNotMatch",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static EpochNotMatch {
@@ -1173,33 +1038,6 @@ impl ::protobuf::Message for ServerIsBusy {
         ServerIsBusy::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "reason",
-                    |m: &ServerIsBusy| { &m.reason },
-                    |m: &mut ServerIsBusy| { &mut m.reason },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "backoff_ms",
-                    |m: &ServerIsBusy| { &m.backoff_ms },
-                    |m: &mut ServerIsBusy| { &mut m.backoff_ms },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ServerIsBusy>(
-                    "ServerIsBusy",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static ServerIsBusy {
         static mut instance: ::protobuf::lazy::Lazy<ServerIsBusy> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -1303,23 +1141,6 @@ impl ::protobuf::Message for StaleCommand {
 
     fn new() -> StaleCommand {
         StaleCommand::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<StaleCommand>(
-                    "StaleCommand",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static StaleCommand {
@@ -1482,33 +1303,6 @@ impl ::protobuf::Message for RaftEntryTooLarge {
 
     fn new() -> RaftEntryTooLarge {
         RaftEntryTooLarge::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RaftEntryTooLarge| { &m.region_id },
-                    |m: &mut RaftEntryTooLarge| { &mut m.region_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "entry_size",
-                    |m: &RaftEntryTooLarge| { &m.entry_size },
-                    |m: &mut RaftEntryTooLarge| { &mut m.entry_size },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RaftEntryTooLarge>(
-                    "RaftEntryTooLarge",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RaftEntryTooLarge {
@@ -2061,68 +1855,6 @@ impl ::protobuf::Message for Error {
         Error::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "message",
-                    |m: &Error| { &m.message },
-                    |m: &mut Error| { &mut m.message },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<NotLeader>>(
-                    "not_leader",
-                    |m: &Error| { &m.not_leader },
-                    |m: &mut Error| { &mut m.not_leader },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<RegionNotFound>>(
-                    "region_not_found",
-                    |m: &Error| { &m.region_not_found },
-                    |m: &mut Error| { &mut m.region_not_found },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<KeyNotInRegion>>(
-                    "key_not_in_region",
-                    |m: &Error| { &m.key_not_in_region },
-                    |m: &mut Error| { &mut m.key_not_in_region },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<EpochNotMatch>>(
-                    "epoch_not_match",
-                    |m: &Error| { &m.epoch_not_match },
-                    |m: &mut Error| { &mut m.epoch_not_match },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<ServerIsBusy>>(
-                    "server_is_busy",
-                    |m: &Error| { &m.server_is_busy },
-                    |m: &mut Error| { &mut m.server_is_busy },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<StaleCommand>>(
-                    "stale_command",
-                    |m: &Error| { &m.stale_command },
-                    |m: &mut Error| { &mut m.stale_command },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<StoreNotMatch>>(
-                    "store_not_match",
-                    |m: &Error| { &m.store_not_match },
-                    |m: &mut Error| { &mut m.store_not_match },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<RaftEntryTooLarge>>(
-                    "raft_entry_too_large",
-                    |m: &Error| { &m.raft_entry_too_large },
-                    |m: &mut Error| { &mut m.raft_entry_too_large },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<Error>(
-                    "Error",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static Error {
         static mut instance: ::protobuf::lazy::Lazy<Error> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -2158,53 +1890,5 @@ impl ::std::fmt::Debug for Error {
 impl ::protobuf::reflect::ProtobufValue for Error {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Message(self)
-    }
-}
-
-static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\rerrorpb.proto\x12\x07errorpb\x1a\x0cmetapb.proto\x1a\x14gogoproto/go\
-    go.proto\"N\n\tNotLeader\x12\x1b\n\tregion_id\x18\x01\x20\x01(\x04R\x08r\
-    egionId\x12$\n\x06leader\x18\x02\x20\x01(\x0b2\x0c.metapb.PeerR\x06leade\
-    r\"a\n\rStoreNotMatch\x12(\n\x10request_store_id\x18\x01\x20\x01(\x04R\
-    \x0erequestStoreId\x12&\n\x0factual_store_id\x18\x02\x20\x01(\x04R\ractu\
-    alStoreId\"-\n\x0eRegionNotFound\x12\x1b\n\tregion_id\x18\x01\x20\x01(\
-    \x04R\x08regionId\"u\n\x0eKeyNotInRegion\x12\x10\n\x03key\x18\x01\x20\
-    \x01(\x0cR\x03key\x12\x1b\n\tregion_id\x18\x02\x20\x01(\x04R\x08regionId\
-    \x12\x1b\n\tstart_key\x18\x03\x20\x01(\x0cR\x08startKey\x12\x17\n\x07end\
-    _key\x18\x04\x20\x01(\x0cR\x06endKey\"H\n\rEpochNotMatch\x127\n\x0fcurre\
-    nt_regions\x18\x01\x20\x03(\x0b2\x0e.metapb.RegionR\x0ecurrentRegions\"E\
-    \n\x0cServerIsBusy\x12\x16\n\x06reason\x18\x01\x20\x01(\tR\x06reason\x12\
-    \x1d\n\nbackoff_ms\x18\x02\x20\x01(\x04R\tbackoffMs\"\x0e\n\x0cStaleComm\
-    and\"O\n\x11RaftEntryTooLarge\x12\x1b\n\tregion_id\x18\x01\x20\x01(\x04R\
-    \x08regionId\x12\x1d\n\nentry_size\x18\x02\x20\x01(\x04R\tentrySize\"\
-    \xae\x04\n\x05Error\x12\x18\n\x07message\x18\x01\x20\x01(\tR\x07message\
-    \x121\n\nnot_leader\x18\x02\x20\x01(\x0b2\x12.errorpb.NotLeaderR\tnotLea\
-    der\x12A\n\x10region_not_found\x18\x03\x20\x01(\x0b2\x17.errorpb.RegionN\
-    otFoundR\x0eregionNotFound\x12B\n\x11key_not_in_region\x18\x04\x20\x01(\
-    \x0b2\x17.errorpb.KeyNotInRegionR\x0ekeyNotInRegion\x12>\n\x0fepoch_not_\
-    match\x18\x05\x20\x01(\x0b2\x16.errorpb.EpochNotMatchR\repochNotMatch\
-    \x12;\n\x0eserver_is_busy\x18\x06\x20\x01(\x0b2\x15.errorpb.ServerIsBusy\
-    R\x0cserverIsBusy\x12:\n\rstale_command\x18\x07\x20\x01(\x0b2\x15.errorp\
-    b.StaleCommandR\x0cstaleCommand\x12>\n\x0fstore_not_match\x18\x08\x20\
-    \x01(\x0b2\x16.errorpb.StoreNotMatchR\rstoreNotMatch\x12K\n\x14raft_entr\
-    y_too_large\x18\t\x20\x01(\x0b2\x1a.errorpb.RaftEntryTooLargeR\x11raftEn\
-    tryTooLargeR\x0bstale_epochB\x1e\n\x10org.tikv.kvproto\xe0\xe2\x1e\x01\
-    \xd0\xe2\x1e\x01\xc8\xe2\x1e\x01b\x06proto3\
-";
-
-static mut file_descriptor_proto_lazy: ::protobuf::lazy::Lazy<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::lazy::Lazy {
-    lock: ::protobuf::lazy::ONCE_INIT,
-    ptr: 0 as *const ::protobuf::descriptor::FileDescriptorProto,
-};
-
-fn parse_descriptor_proto() -> ::protobuf::descriptor::FileDescriptorProto {
-    ::protobuf::parse_from_bytes(file_descriptor_proto_data).unwrap()
-}
-
-pub fn file_descriptor_proto() -> &'static ::protobuf::descriptor::FileDescriptorProto {
-    unsafe {
-        file_descriptor_proto_lazy.get(|| {
-            parse_descriptor_proto()
-        })
     }
 }

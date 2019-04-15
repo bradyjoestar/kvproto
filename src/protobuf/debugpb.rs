@@ -193,38 +193,6 @@ impl ::protobuf::Message for GetRequest {
         GetRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<DB>>(
-                    "db",
-                    |m: &GetRequest| { &m.db },
-                    |m: &mut GetRequest| { &mut m.db },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "cf",
-                    |m: &GetRequest| { &m.cf },
-                    |m: &mut GetRequest| { &mut m.cf },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "key",
-                    |m: &GetRequest| { &m.key },
-                    |m: &mut GetRequest| { &mut m.key },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetRequest>(
-                    "GetRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static GetRequest {
         static mut instance: ::protobuf::lazy::Lazy<GetRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -366,28 +334,6 @@ impl ::protobuf::Message for GetResponse {
 
     fn new() -> GetResponse {
         GetResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "value",
-                    |m: &GetResponse| { &m.value },
-                    |m: &mut GetResponse| { &mut m.value },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetResponse>(
-                    "GetResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static GetResponse {
@@ -553,33 +499,6 @@ impl ::protobuf::Message for RaftLogRequest {
         RaftLogRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RaftLogRequest| { &m.region_id },
-                    |m: &mut RaftLogRequest| { &mut m.region_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "log_index",
-                    |m: &RaftLogRequest| { &m.log_index },
-                    |m: &mut RaftLogRequest| { &mut m.log_index },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RaftLogRequest>(
-                    "RaftLogRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RaftLogRequest {
         static mut instance: ::protobuf::lazy::Lazy<RaftLogRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -737,28 +656,6 @@ impl ::protobuf::Message for RaftLogResponse {
         RaftLogResponse::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::eraftpb::Entry>>(
-                    "entry",
-                    |m: &RaftLogResponse| { &m.entry },
-                    |m: &mut RaftLogResponse| { &mut m.entry },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RaftLogResponse>(
-                    "RaftLogResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RaftLogResponse {
         static mut instance: ::protobuf::lazy::Lazy<RaftLogResponse> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -891,28 +788,6 @@ impl ::protobuf::Message for RegionInfoRequest {
 
     fn new() -> RegionInfoRequest {
         RegionInfoRequest::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RegionInfoRequest| { &m.region_id },
-                    |m: &mut RegionInfoRequest| { &mut m.region_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionInfoRequest>(
-                    "RegionInfoRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RegionInfoRequest {
@@ -1173,38 +1048,6 @@ impl ::protobuf::Message for RegionInfoResponse {
         RegionInfoResponse::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::raft_serverpb::RaftLocalState>>(
-                    "raft_local_state",
-                    |m: &RegionInfoResponse| { &m.raft_local_state },
-                    |m: &mut RegionInfoResponse| { &mut m.raft_local_state },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::raft_serverpb::RaftApplyState>>(
-                    "raft_apply_state",
-                    |m: &RegionInfoResponse| { &m.raft_apply_state },
-                    |m: &mut RegionInfoResponse| { &mut m.raft_apply_state },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::raft_serverpb::RegionLocalState>>(
-                    "region_local_state",
-                    |m: &RegionInfoResponse| { &m.region_local_state },
-                    |m: &mut RegionInfoResponse| { &mut m.region_local_state },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionInfoResponse>(
-                    "RegionInfoResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RegionInfoResponse {
         static mut instance: ::protobuf::lazy::Lazy<RegionInfoResponse> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -1376,33 +1219,6 @@ impl ::protobuf::Message for RegionSizeRequest {
         RegionSizeRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RegionSizeRequest| { &m.region_id },
-                    |m: &mut RegionSizeRequest| { &mut m.region_id },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "cfs",
-                    |m: &RegionSizeRequest| { &m.cfs },
-                    |m: &mut RegionSizeRequest| { &mut m.cfs },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionSizeRequest>(
-                    "RegionSizeRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RegionSizeRequest {
         static mut instance: ::protobuf::lazy::Lazy<RegionSizeRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -1550,28 +1366,6 @@ impl ::protobuf::Message for RegionSizeResponse {
 
     fn new() -> RegionSizeResponse {
         RegionSizeResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<RegionSizeResponse_Entry>>(
-                    "entries",
-                    |m: &RegionSizeResponse| { &m.entries },
-                    |m: &mut RegionSizeResponse| { &mut m.entries },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionSizeResponse>(
-                    "RegionSizeResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RegionSizeResponse {
@@ -1742,33 +1536,6 @@ impl ::protobuf::Message for RegionSizeResponse_Entry {
 
     fn new() -> RegionSizeResponse_Entry {
         RegionSizeResponse_Entry::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "cf",
-                    |m: &RegionSizeResponse_Entry| { &m.cf },
-                    |m: &mut RegionSizeResponse_Entry| { &mut m.cf },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "size",
-                    |m: &RegionSizeResponse_Entry| { &m.size },
-                    |m: &mut RegionSizeResponse_Entry| { &mut m.size },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionSizeResponse_Entry>(
-                    "RegionSizeResponse_Entry",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RegionSizeResponse_Entry {
@@ -1978,38 +1745,6 @@ impl ::protobuf::Message for ScanMvccRequest {
         ScanMvccRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "from_key",
-                    |m: &ScanMvccRequest| { &m.from_key },
-                    |m: &mut ScanMvccRequest| { &mut m.from_key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "to_key",
-                    |m: &ScanMvccRequest| { &m.to_key },
-                    |m: &mut ScanMvccRequest| { &mut m.to_key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "limit",
-                    |m: &ScanMvccRequest| { &m.limit },
-                    |m: &mut ScanMvccRequest| { &mut m.limit },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ScanMvccRequest>(
-                    "ScanMvccRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static ScanMvccRequest {
         static mut instance: ::protobuf::lazy::Lazy<ScanMvccRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -2202,33 +1937,6 @@ impl ::protobuf::Message for ScanMvccResponse {
 
     fn new() -> ScanMvccResponse {
         ScanMvccResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "key",
-                    |m: &ScanMvccResponse| { &m.key },
-                    |m: &mut ScanMvccResponse| { &mut m.key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_singular_ptr_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<super::kvrpcpb::MvccInfo>>(
-                    "info",
-                    |m: &ScanMvccResponse| { &m.info },
-                    |m: &mut ScanMvccResponse| { &mut m.info },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ScanMvccResponse>(
-                    "ScanMvccResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static ScanMvccResponse {
@@ -2524,53 +2232,6 @@ impl ::protobuf::Message for CompactRequest {
         CompactRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<DB>>(
-                    "db",
-                    |m: &CompactRequest| { &m.db },
-                    |m: &mut CompactRequest| { &mut m.db },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "cf",
-                    |m: &CompactRequest| { &m.cf },
-                    |m: &mut CompactRequest| { &mut m.cf },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "from_key",
-                    |m: &CompactRequest| { &m.from_key },
-                    |m: &mut CompactRequest| { &mut m.from_key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
-                    "to_key",
-                    |m: &CompactRequest| { &m.to_key },
-                    |m: &mut CompactRequest| { &mut m.to_key },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint32>(
-                    "threads",
-                    |m: &CompactRequest| { &m.threads },
-                    |m: &mut CompactRequest| { &mut m.threads },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<BottommostLevelCompaction>>(
-                    "bottommost_level_compaction",
-                    |m: &CompactRequest| { &m.bottommost_level_compaction },
-                    |m: &mut CompactRequest| { &mut m.bottommost_level_compaction },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<CompactRequest>(
-                    "CompactRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static CompactRequest {
         static mut instance: ::protobuf::lazy::Lazy<CompactRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -2678,23 +2339,6 @@ impl ::protobuf::Message for CompactResponse {
 
     fn new() -> CompactResponse {
         CompactResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<CompactResponse>(
-                    "CompactResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static CompactResponse {
@@ -2873,33 +2517,6 @@ impl ::protobuf::Message for InjectFailPointRequest {
         InjectFailPointRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "name",
-                    |m: &InjectFailPointRequest| { &m.name },
-                    |m: &mut InjectFailPointRequest| { &mut m.name },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "actions",
-                    |m: &InjectFailPointRequest| { &m.actions },
-                    |m: &mut InjectFailPointRequest| { &mut m.actions },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<InjectFailPointRequest>(
-                    "InjectFailPointRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static InjectFailPointRequest {
         static mut instance: ::protobuf::lazy::Lazy<InjectFailPointRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -3003,23 +2620,6 @@ impl ::protobuf::Message for InjectFailPointResponse {
 
     fn new() -> InjectFailPointResponse {
         InjectFailPointResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<InjectFailPointResponse>(
-                    "InjectFailPointResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static InjectFailPointResponse {
@@ -3162,28 +2762,6 @@ impl ::protobuf::Message for RecoverFailPointRequest {
         RecoverFailPointRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "name",
-                    |m: &RecoverFailPointRequest| { &m.name },
-                    |m: &mut RecoverFailPointRequest| { &mut m.name },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RecoverFailPointRequest>(
-                    "RecoverFailPointRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RecoverFailPointRequest {
         static mut instance: ::protobuf::lazy::Lazy<RecoverFailPointRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -3288,23 +2866,6 @@ impl ::protobuf::Message for RecoverFailPointResponse {
         RecoverFailPointResponse::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<RecoverFailPointResponse>(
-                    "RecoverFailPointResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RecoverFailPointResponse {
         static mut instance: ::protobuf::lazy::Lazy<RecoverFailPointResponse> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -3406,23 +2967,6 @@ impl ::protobuf::Message for ListFailPointsRequest {
 
     fn new() -> ListFailPointsRequest {
         ListFailPointsRequest::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<ListFailPointsRequest>(
-                    "ListFailPointsRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static ListFailPointsRequest {
@@ -3570,28 +3114,6 @@ impl ::protobuf::Message for ListFailPointsResponse {
 
     fn new() -> ListFailPointsResponse {
         ListFailPointsResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<ListFailPointsResponse_Entry>>(
-                    "entries",
-                    |m: &ListFailPointsResponse| { &m.entries },
-                    |m: &mut ListFailPointsResponse| { &mut m.entries },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ListFailPointsResponse>(
-                    "ListFailPointsResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static ListFailPointsResponse {
@@ -3771,33 +3293,6 @@ impl ::protobuf::Message for ListFailPointsResponse_Entry {
         ListFailPointsResponse_Entry::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "name",
-                    |m: &ListFailPointsResponse_Entry| { &m.name },
-                    |m: &mut ListFailPointsResponse_Entry| { &mut m.name },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "actions",
-                    |m: &ListFailPointsResponse_Entry| { &m.actions },
-                    |m: &mut ListFailPointsResponse_Entry| { &mut m.actions },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ListFailPointsResponse_Entry>(
-                    "ListFailPointsResponse_Entry",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static ListFailPointsResponse_Entry {
         static mut instance: ::protobuf::lazy::Lazy<ListFailPointsResponse_Entry> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -3931,28 +3426,6 @@ impl ::protobuf::Message for GetMetricsRequest {
 
     fn new() -> GetMetricsRequest {
         GetMetricsRequest::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBool>(
-                    "all",
-                    |m: &GetMetricsRequest| { &m.all },
-                    |m: &mut GetMetricsRequest| { &mut m.all },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetMetricsRequest>(
-                    "GetMetricsRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static GetMetricsRequest {
@@ -4233,48 +3706,6 @@ impl ::protobuf::Message for GetMetricsResponse {
         GetMetricsResponse::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "prometheus",
-                    |m: &GetMetricsResponse| { &m.prometheus },
-                    |m: &mut GetMetricsResponse| { &mut m.prometheus },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "rocksdb_kv",
-                    |m: &GetMetricsResponse| { &m.rocksdb_kv },
-                    |m: &mut GetMetricsResponse| { &mut m.rocksdb_kv },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "rocksdb_raft",
-                    |m: &GetMetricsResponse| { &m.rocksdb_raft },
-                    |m: &mut GetMetricsResponse| { &mut m.rocksdb_raft },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "jemalloc",
-                    |m: &GetMetricsResponse| { &m.jemalloc },
-                    |m: &mut GetMetricsResponse| { &mut m.jemalloc },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "store_id",
-                    |m: &GetMetricsResponse| { &m.store_id },
-                    |m: &mut GetMetricsResponse| { &mut m.store_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetMetricsResponse>(
-                    "GetMetricsResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static GetMetricsResponse {
         static mut instance: ::protobuf::lazy::Lazy<GetMetricsResponse> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -4413,28 +3844,6 @@ impl ::protobuf::Message for RegionConsistencyCheckRequest {
         RegionConsistencyCheckRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &RegionConsistencyCheckRequest| { &m.region_id },
-                    |m: &mut RegionConsistencyCheckRequest| { &mut m.region_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<RegionConsistencyCheckRequest>(
-                    "RegionConsistencyCheckRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static RegionConsistencyCheckRequest {
         static mut instance: ::protobuf::lazy::Lazy<RegionConsistencyCheckRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -4537,23 +3946,6 @@ impl ::protobuf::Message for RegionConsistencyCheckResponse {
 
     fn new() -> RegionConsistencyCheckResponse {
         RegionConsistencyCheckResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<RegionConsistencyCheckResponse>(
-                    "RegionConsistencyCheckResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static RegionConsistencyCheckResponse {
@@ -4757,38 +4149,6 @@ impl ::protobuf::Message for ModifyTikvConfigRequest {
         ModifyTikvConfigRequest::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeEnum<MODULE>>(
-                    "module",
-                    |m: &ModifyTikvConfigRequest| { &m.module },
-                    |m: &mut ModifyTikvConfigRequest| { &mut m.module },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "config_name",
-                    |m: &ModifyTikvConfigRequest| { &m.config_name },
-                    |m: &mut ModifyTikvConfigRequest| { &mut m.config_name },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "config_value",
-                    |m: &ModifyTikvConfigRequest| { &m.config_value },
-                    |m: &mut ModifyTikvConfigRequest| { &mut m.config_value },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<ModifyTikvConfigRequest>(
-                    "ModifyTikvConfigRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static ModifyTikvConfigRequest {
         static mut instance: ::protobuf::lazy::Lazy<ModifyTikvConfigRequest> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -4893,23 +4253,6 @@ impl ::protobuf::Message for ModifyTikvConfigResponse {
 
     fn new() -> ModifyTikvConfigResponse {
         ModifyTikvConfigResponse::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let fields = ::std::vec::Vec::new();
-                ::protobuf::reflect::MessageDescriptor::new::<ModifyTikvConfigResponse>(
-                    "ModifyTikvConfigResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static ModifyTikvConfigResponse {
@@ -5088,33 +4431,6 @@ impl ::protobuf::Message for Property {
         Property::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "name",
-                    |m: &Property| { &m.name },
-                    |m: &mut Property| { &mut m.name },
-                ));
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeString>(
-                    "value",
-                    |m: &Property| { &m.value },
-                    |m: &mut Property| { &mut m.value },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<Property>(
-                    "Property",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static Property {
         static mut instance: ::protobuf::lazy::Lazy<Property> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -5248,28 +4564,6 @@ impl ::protobuf::Message for GetRegionPropertiesRequest {
 
     fn new() -> GetRegionPropertiesRequest {
         GetRegionPropertiesRequest::new()
-    }
-
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeUint64>(
-                    "region_id",
-                    |m: &GetRegionPropertiesRequest| { &m.region_id },
-                    |m: &mut GetRegionPropertiesRequest| { &mut m.region_id },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetRegionPropertiesRequest>(
-                    "GetRegionPropertiesRequest",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
     }
 
     fn default_instance() -> &'static GetRegionPropertiesRequest {
@@ -5420,28 +4714,6 @@ impl ::protobuf::Message for GetRegionPropertiesResponse {
         GetRegionPropertiesResponse::new()
     }
 
-    fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::MessageDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::MessageDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                let mut fields = ::std::vec::Vec::new();
-                fields.push(::protobuf::reflect::accessor::make_repeated_field_accessor::<_, ::protobuf::types::ProtobufTypeMessage<Property>>(
-                    "props",
-                    |m: &GetRegionPropertiesResponse| { &m.props },
-                    |m: &mut GetRegionPropertiesResponse| { &mut m.props },
-                ));
-                ::protobuf::reflect::MessageDescriptor::new::<GetRegionPropertiesResponse>(
-                    "GetRegionPropertiesResponse",
-                    fields,
-                    file_descriptor_proto()
-                )
-            })
-        }
-    }
-
     fn default_instance() -> &'static GetRegionPropertiesResponse {
         static mut instance: ::protobuf::lazy::Lazy<GetRegionPropertiesResponse> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
@@ -5500,18 +4772,6 @@ impl ::protobuf::ProtobufEnum for DB {
             DB::RAFT,
         ];
         values
-    }
-
-    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::EnumDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::EnumDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                ::protobuf::reflect::EnumDescriptor::new("DB", file_descriptor_proto())
-            })
-        }
     }
 }
 
@@ -5583,18 +4843,6 @@ impl ::protobuf::ProtobufEnum for MODULE {
         ];
         values
     }
-
-    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::EnumDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::EnumDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                ::protobuf::reflect::EnumDescriptor::new("MODULE", file_descriptor_proto())
-            })
-        }
-    }
 }
 
 impl ::std::marker::Copy for MODULE {
@@ -5641,18 +4889,6 @@ impl ::protobuf::ProtobufEnum for BottommostLevelCompaction {
         ];
         values
     }
-
-    fn enum_descriptor_static() -> &'static ::protobuf::reflect::EnumDescriptor {
-        static mut descriptor: ::protobuf::lazy::Lazy<::protobuf::reflect::EnumDescriptor> = ::protobuf::lazy::Lazy {
-            lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const ::protobuf::reflect::EnumDescriptor,
-        };
-        unsafe {
-            descriptor.get(|| {
-                ::protobuf::reflect::EnumDescriptor::new("BottommostLevelCompaction", file_descriptor_proto())
-            })
-        }
-    }
 }
 
 impl ::std::marker::Copy for BottommostLevelCompaction {
@@ -5667,105 +4903,5 @@ impl ::std::default::Default for BottommostLevelCompaction {
 impl ::protobuf::reflect::ProtobufValue for BottommostLevelCompaction {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Enum(self.descriptor())
-    }
-}
-
-static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\rdebugpb.proto\x12\x07debugpb\x1a\reraftpb.proto\x1a\rkvrpcpb.proto\
-    \x1a\x13raft_serverpb.proto\x1a\x14gogoproto/gogo.proto\"K\n\nGetRequest\
-    \x12\x1b\n\x02db\x18\x01\x20\x01(\x0e2\x0b.debugpb.DBR\x02db\x12\x0e\n\
-    \x02cf\x18\x02\x20\x01(\tR\x02cf\x12\x10\n\x03key\x18\x03\x20\x01(\x0cR\
-    \x03key\"#\n\x0bGetResponse\x12\x14\n\x05value\x18\x01\x20\x01(\x0cR\x05\
-    value\"J\n\x0eRaftLogRequest\x12\x1b\n\tregion_id\x18\x01\x20\x01(\x04R\
-    \x08regionId\x12\x1b\n\tlog_index\x18\x02\x20\x01(\x04R\x08logIndex\"7\n\
-    \x0fRaftLogResponse\x12$\n\x05entry\x18\x01\x20\x01(\x0b2\x0e.eraftpb.En\
-    tryR\x05entry\"0\n\x11RegionInfoRequest\x12\x1b\n\tregion_id\x18\x01\x20\
-    \x01(\x04R\x08regionId\"\xf5\x01\n\x12RegionInfoResponse\x12G\n\x10raft_\
-    local_state\x18\x01\x20\x01(\x0b2\x1d.raft_serverpb.RaftLocalStateR\x0er\
-    aftLocalState\x12G\n\x10raft_apply_state\x18\x02\x20\x01(\x0b2\x1d.raft_\
-    serverpb.RaftApplyStateR\x0eraftApplyState\x12M\n\x12region_local_state\
-    \x18\x03\x20\x01(\x0b2\x1f.raft_serverpb.RegionLocalStateR\x10regionLoca\
-    lState\"B\n\x11RegionSizeRequest\x12\x1b\n\tregion_id\x18\x01\x20\x01(\
-    \x04R\x08regionId\x12\x10\n\x03cfs\x18\x02\x20\x03(\tR\x03cfs\"~\n\x12Re\
-    gionSizeResponse\x12;\n\x07entries\x18\x01\x20\x03(\x0b2!.debugpb.Region\
-    SizeResponse.EntryR\x07entries\x1a+\n\x05Entry\x12\x0e\n\x02cf\x18\x01\
-    \x20\x01(\tR\x02cf\x12\x12\n\x04size\x18\x02\x20\x01(\x04R\x04size\"Y\n\
-    \x0fScanMvccRequest\x12\x19\n\x08from_key\x18\x01\x20\x01(\x0cR\x07fromK\
-    ey\x12\x15\n\x06to_key\x18\x02\x20\x01(\x0cR\x05toKey\x12\x14\n\x05limit\
-    \x18\x03\x20\x01(\x04R\x05limit\"K\n\x10ScanMvccResponse\x12\x10\n\x03ke\
-    y\x18\x01\x20\x01(\x0cR\x03key\x12%\n\x04info\x18\x02\x20\x01(\x0b2\x11.\
-    kvrpcpb.MvccInfoR\x04info\"\xed\x01\n\x0eCompactRequest\x12\x1b\n\x02db\
-    \x18\x01\x20\x01(\x0e2\x0b.debugpb.DBR\x02db\x12\x0e\n\x02cf\x18\x02\x20\
-    \x01(\tR\x02cf\x12\x19\n\x08from_key\x18\x03\x20\x01(\x0cR\x07fromKey\
-    \x12\x15\n\x06to_key\x18\x04\x20\x01(\x0cR\x05toKey\x12\x18\n\x07threads\
-    \x18\x05\x20\x01(\rR\x07threads\x12b\n\x1bbottommost_level_compaction\
-    \x18\x06\x20\x01(\x0e2\".debugpb.BottommostLevelCompactionR\x19bottommos\
-    tLevelCompaction\"\x11\n\x0fCompactResponse\"F\n\x16InjectFailPointReque\
-    st\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04name\x12\x18\n\x07actions\
-    \x18\x02\x20\x01(\tR\x07actions\"\x19\n\x17InjectFailPointResponse\"-\n\
-    \x17RecoverFailPointRequest\x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04nam\
-    e\"\x1a\n\x18RecoverFailPointResponse\"\x17\n\x15ListFailPointsRequest\"\
-    \x90\x01\n\x16ListFailPointsResponse\x12?\n\x07entries\x18\x01\x20\x03(\
-    \x0b2%.debugpb.ListFailPointsResponse.EntryR\x07entries\x1a5\n\x05Entry\
-    \x12\x12\n\x04name\x18\x01\x20\x01(\tR\x04name\x12\x18\n\x07actions\x18\
-    \x02\x20\x01(\tR\x07actions\"%\n\x11GetMetricsRequest\x12\x10\n\x03all\
-    \x18\x01\x20\x01(\x08R\x03all\"\xad\x01\n\x12GetMetricsResponse\x12\x1e\
-    \n\nprometheus\x18\x01\x20\x01(\tR\nprometheus\x12\x1d\n\nrocksdb_kv\x18\
-    \x02\x20\x01(\tR\trocksdbKv\x12!\n\x0crocksdb_raft\x18\x03\x20\x01(\tR\
-    \x0brocksdbRaft\x12\x1a\n\x08jemalloc\x18\x04\x20\x01(\tR\x08jemalloc\
-    \x12\x19\n\x08store_id\x18\x05\x20\x01(\x04R\x07storeId\"<\n\x1dRegionCo\
-    nsistencyCheckRequest\x12\x1b\n\tregion_id\x18\x01\x20\x01(\x04R\x08regi\
-    onId\"\x20\n\x1eRegionConsistencyCheckResponse\"\x86\x01\n\x17ModifyTikv\
-    ConfigRequest\x12'\n\x06module\x18\x01\x20\x01(\x0e2\x0f.debugpb.MODULER\
-    \x06module\x12\x1f\n\x0bconfig_name\x18\x02\x20\x01(\tR\nconfigName\x12!\
-    \n\x0cconfig_value\x18\x03\x20\x01(\tR\x0bconfigValue\"\x1a\n\x18ModifyT\
-    ikvConfigResponse\"4\n\x08Property\x12\x12\n\x04name\x18\x01\x20\x01(\tR\
-    \x04name\x12\x14\n\x05value\x18\x02\x20\x01(\tR\x05value\"9\n\x1aGetRegi\
-    onPropertiesRequest\x12\x1b\n\tregion_id\x18\x01\x20\x01(\x04R\x08region\
-    Id\"F\n\x1bGetRegionPropertiesResponse\x12'\n\x05props\x18\x01\x20\x03(\
-    \x0b2\x11.debugpb.PropertyR\x05props*#\n\x02DB\x12\x0b\n\x07INVALID\x10\
-    \0\x12\x06\n\x02KV\x10\x01\x12\x08\n\x04RAFT\x10\x02*\x90\x01\n\x06MODUL\
-    E\x12\n\n\x06UNUSED\x10\0\x12\x08\n\x04KVDB\x10\x01\x12\n\n\x06RAFTDB\
-    \x10\x02\x12\x0c\n\x08READPOOL\x10\x03\x12\n\n\x06SERVER\x10\x04\x12\x0b\
-    \n\x07STORAGE\x10\x05\x12\x06\n\x02PD\x10\x06\x12\n\n\x06METRIC\x10\x07\
-    \x12\x0f\n\x0bCOPROCESSOR\x10\x08\x12\x0c\n\x08SECURITY\x10\t\x12\n\n\
-    \x06IMPORT\x10\n*L\n\x19BottommostLevelCompaction\x12\x08\n\x04Skip\x10\
-    \0\x12\t\n\x05Force\x10\x01\x12\x1a\n\x16IfHaveCompactionFilter\x10\x022\
-    \x8f\x08\n\x05Debug\x122\n\x03Get\x12\x13.debugpb.GetRequest\x1a\x14.deb\
-    ugpb.GetResponse\"\0\x12>\n\x07RaftLog\x12\x17.debugpb.RaftLogRequest\
-    \x1a\x18.debugpb.RaftLogResponse\"\0\x12G\n\nRegionInfo\x12\x1a.debugpb.\
-    RegionInfoRequest\x1a\x1b.debugpb.RegionInfoResponse\"\0\x12G\n\nRegionS\
-    ize\x12\x1a.debugpb.RegionSizeRequest\x1a\x1b.debugpb.RegionSizeResponse\
-    \"\0\x12C\n\x08ScanMvcc\x12\x18.debugpb.ScanMvccRequest\x1a\x19.debugpb.\
-    ScanMvccResponse\"\00\x01\x12>\n\x07Compact\x12\x17.debugpb.CompactReque\
-    st\x1a\x18.debugpb.CompactResponse\"\0\x12V\n\x0fInjectFailPoint\x12\x1f\
-    .debugpb.InjectFailPointRequest\x1a\x20.debugpb.InjectFailPointResponse\
-    \"\0\x12Y\n\x10RecoverFailPoint\x12\x20.debugpb.RecoverFailPointRequest\
-    \x1a!.debugpb.RecoverFailPointResponse\"\0\x12S\n\x0eListFailPoints\x12\
-    \x1e.debugpb.ListFailPointsRequest\x1a\x1f.debugpb.ListFailPointsRespons\
-    e\"\0\x12G\n\nGetMetrics\x12\x1a.debugpb.GetMetricsRequest\x1a\x1b.debug\
-    pb.GetMetricsResponse\"\0\x12k\n\x16CheckRegionConsistency\x12&.debugpb.\
-    RegionConsistencyCheckRequest\x1a'.debugpb.RegionConsistencyCheckRespons\
-    e\"\0\x12Y\n\x10ModifyTikvConfig\x12\x20.debugpb.ModifyTikvConfigRequest\
-    \x1a!.debugpb.ModifyTikvConfigResponse\"\0\x12b\n\x13GetRegionProperties\
-    \x12#.debugpb.GetRegionPropertiesRequest\x1a$.debugpb.GetRegionPropertie\
-    sResponse\"\0B\x1e\n\x10org.tikv.kvproto\xe0\xe2\x1e\x01\xd0\xe2\x1e\x01\
-    \xc8\xe2\x1e\x01b\x06proto3\
-";
-
-static mut file_descriptor_proto_lazy: ::protobuf::lazy::Lazy<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::lazy::Lazy {
-    lock: ::protobuf::lazy::ONCE_INIT,
-    ptr: 0 as *const ::protobuf::descriptor::FileDescriptorProto,
-};
-
-fn parse_descriptor_proto() -> ::protobuf::descriptor::FileDescriptorProto {
-    ::protobuf::parse_from_bytes(file_descriptor_proto_data).unwrap()
-}
-
-pub fn file_descriptor_proto() -> &'static ::protobuf::descriptor::FileDescriptorProto {
-    unsafe {
-        file_descriptor_proto_lazy.get(|| {
-            parse_descriptor_proto()
-        })
     }
 }

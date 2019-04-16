@@ -95,7 +95,7 @@ message BatchCommandsRequest {
             kvrpcpb.RawBatchScanRequest RawBatchScan = 21;
 
             coprocessor.Request Coprocessor = 22;
-            kvrpcpb.PessimisticLockRequest Pessimistic = 23;
+            kvrpcpb.PessimisticLockRequest PessimisticLock = 23;
         }
     }
 }

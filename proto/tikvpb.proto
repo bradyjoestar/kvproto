@@ -93,6 +93,7 @@ message BatchCommandsRequest {
             kvrpcpb.RawBatchScanRequest RawBatchScan = 21;
 
             coprocessor.Request Coprocessor = 22;
+            kvrpcpb.PessimisticLockRequest Pessimistic = 23;
         }
     }
 }
@@ -129,6 +130,7 @@ message BatchCommandsResponse {
             kvrpcpb.RawBatchScanResponse RawBatchScan = 21;
 
             coprocessor.Response Coprocessor = 22;
+            kvrpcpb.PessimisticLockResponse PessimisticLock = 23;
         }
     }
 }

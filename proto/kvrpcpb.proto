@@ -152,6 +152,7 @@ message PrewriteRequest {
     uint64 start_version = 4;
     uint64 lock_ttl = 5;
     bool skip_constraint_check = 6;
+    repeated bool pessimistic_lock_exist = 7;
 }
 
 message PrewriteResponse {

@@ -167,6 +167,7 @@ message PessimisticLockRequest {
         uint64 start_version = 4;
         uint64 lock_ttl = 5;
         uint64 for_update_ts = 6;
+        bool HoldingLocks = 7;
 }
 
 message PessimisticLockResponse {
